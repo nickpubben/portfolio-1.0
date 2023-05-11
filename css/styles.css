@@ -12,11 +12,16 @@
     font-family: RobotoRegular;
     src: url("../fonts/Roboto-Regular.ttf");
 }
+@font-face {
+    font-family: RobotoBold;
+    src: url("../fonts/Roboto-Bold.ttf");
+}
 
 html {
     background-color: var(--main-color);
 }
 
+/* Navigation Bar */
 navbar {
     background-color: var(--dark-color);
     color: var(--main-color);
@@ -28,48 +33,24 @@ navbar {
     flex-flow: column wrap;
     align-items: center;
 }
-.navbarMenu img {
-    width: 5vh;
-    height: auto;
-}
 navbar h5 {
     font-size: 2vh;
     font-family: RobotoRegular;
     transform: rotate(-90deg);
     text-decoration: none;
 }
+.navbarMenu img {
+    width: 2.5vw;
+    height: auto;
+}
 .navbarContent {
     display: flex;
     flex-direction: column;
-    margin-top: 45vh;
+    margin-top: 38vh;
     gap: 15vh;
 }
-/*navbar {*/
-/*    background-color: var(--dark-color);*/
-/*    color: var(--main-color);*/
-/*    flex-wrap: wrap;*/
-/*    position: fixed;*/
-/*    width: 5vw;*/
-/*    left: 0;*/
-/*    top: 0;*/
-/*    height: 100vh;*/
-/*    padding: 35px 25px;*/
-/*    z-index: 2;*/
-/*}*/
-/*navbar h5 {*/
-/*    font-size: 2vh;*/
-/*    writing-mode: vertical-rl;*/
-/*    transform: rotate(180deg);*/
-/*    font-family: RobotoRegular;*/
-/*}*/
-/*.navbarContent {*/
-/*    width: 100vw;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    gap: 15vh;*/
-/*    margin-top: 15vh;*/
-/*}*/
 
+/* Main page */
 main {
     position: fixed;
     right: 0px;
@@ -77,4 +58,65 @@ main {
     width: calc(100% - 5vw);
     height: 100vh;
     z-index: 1;
+}
+.main-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.main-container-1 {
+    /*background-color: red;*/
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container-1 img {
+    width: 25vw;
+    height: auto;
+    border-radius: 50px;
+}
+
+.main-container-2 {
+    /*background-color: blue;*/
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 0 0 2vw;
+}
+.main-container-2 img {
+    width: 10vw;
+    height: auto;
+}
+#line {
+    width: 10vw;
+    border: 2px solid var(--dark-color);
+    margin-bottom: 25px;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+.main-content h1 {
+    font-size: 10vh;
+    font-family: RobotoBold;
+}
+.main-content p {
+    font-size: 4vh;
+    font-family: RobotoRegular;
+    text-transform: uppercase;
+    width: 55vw;
+}
+
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.social-media-icons img {
+    width: 3vw;
+    height: auto;
 }
