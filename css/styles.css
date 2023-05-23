@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    cursor: none;
 }
 
 ::-webkit-scrollbar {
@@ -26,6 +27,58 @@ html {
     background-color: var(--main-color);
 }
 
+
+
+/* Cursor Animation */
+.cursor {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--main-color);
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transform-origin: 100% 100%;
+    mix-blend-mode: difference;
+}
+
+
+
+/* Horizontal scroll settings */
+main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vw;
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(-100vh);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.scroll-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    transform-origin: top left;
+    transform: rotate(90deg) translateY(-100vh);
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: 3rem;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+
 /* Navigation Bar */
 navbar {
     background-color: var(--dark-color);
@@ -44,6 +97,10 @@ navbar h5 {
     transform: rotate(-90deg);
     text-decoration: none;
 }
+navbar ul a {
+    text-decoration: none;
+    color: var(--main-color);
+}
 .navbarMenu img {
     width: 2.5vw;
     height: auto;
@@ -54,6 +111,8 @@ navbar h5 {
     margin-top: 38vh;
     gap: 15vh;
 }
+
+
 
 /* Main page */
 .home-section-main {
@@ -70,7 +129,6 @@ navbar h5 {
     height: 100vh;
 }
 .main-container-1 {
-    /*background-color: red;*/
     width: 30vw;
     height: 100vh;
     display: flex;
@@ -84,7 +142,6 @@ navbar h5 {
 }
 
 .main-container-2 {
-    /*background-color: blue;*/
     width: 70vw;
     height: 100vh;
     display: flex;
@@ -130,33 +187,10 @@ navbar h5 {
 
 
 
-main {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vh;
-    height: 100vw;
-    transform-origin: top left;
-    transform: rotate(-90deg) translateX(-100vh);
-    overflow-x: hidden;
-    overflow-y: scroll;
+.projects-section {
+    background-color: orange;
 }
-.scroll-wrapper {
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    height: fit-content;
-    transform-origin: top left;
-    transform: rotate(90deg) translateY(-100vh);
-}
-section {
-    width: 100vw;
-    height: 100vh;
-    overflow-y: hidden;
-    display: flex;
-    align-items: center;
-    font-family: monospace;
-    font-size: 3rem;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+.contact-section {
+    background-color: var(--dark-color);
+    color: var(--main-color);
 }
